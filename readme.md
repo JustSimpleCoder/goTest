@@ -1,14 +1,13 @@
 
 # 尝试通过整式是学习的方式学习一下Go语言
 
-## 小目标 写1000行代码
+## 小目标 先写10000行代码
 
 
 ## 环境搭建
 - goLang + GOPATH（项目目录） + GOROOT（环境目录） 等环境变量
 - 编辑器 Sublime + goSublime（ https://packagecontrol.io/packages/GoSublime 英文不好影响了效率 ） + gofmt
 - 
-
 
 ## 框架
 - 基础知识笔记
@@ -26,7 +25,34 @@
         * 顺序全局变量  init 函数  main 函数
         * import 导入但是不引用 使用 下划线 _ "packageName" 包_   X "packageName" X 是别名
     + 数组[] 、 切片[:] 、 MAP[KEY->VALUE] (使用 make 初始化)
+    + 结构体  new(Student)  &Student  都是初始化结构体的方法  返回指针  stu.  == ×stu  tag 信息   匿名字段
+    ```
+    type ST struct {
+        Name string `json:"stname"`
+        Age  int    `json:"stage"`
+        Math
+    }
+    ST.Math.scores = 100
+
+    func(receiver type) method(参数) 返回值 {}
+    ```
+    + 面向接口编程 interface
+        * 只能有方法
+        * 接口可以嵌套
+        * if v,ok = f.(interfacefunName);ok{}  是否实现了此接口
+    + 反射 动态的获取变量类型、如果是结构体可以调用里面的方法（个人预测项目会使用较多） 
+    ```
+    v := reflect.ValueOf(x)
+    v.Elem().SetInt(10)
+    ```
 
 - 线程同步  互斥锁、读写锁    import sync   原子操作 sync/atomic
+- file 文件操作
 - 模块 http
 -
+
+
+
+## 项目其他
+- 服务注册和服务发现
+- 一致性hash
