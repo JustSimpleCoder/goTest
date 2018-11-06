@@ -48,6 +48,8 @@
 
 - 线程同步  互斥锁、读写锁    import sync   原子操作 sync/atomic
 - file 文件操作
+    + os.OpenFile  写   os.Open 读
+    + ioutil  统一读出写入
 - 模块 http
 -
 

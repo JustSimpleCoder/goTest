@@ -21,7 +21,8 @@ func main() {
     }
 
     n := &homework.OBO{}
-    for j := 0; j < 10; j++ {
+    // n := &homework.R{}
+    for j := 0; j < 20; j++ {
 
         h := n.DoSend(hs)
         fmt.Println(h)
