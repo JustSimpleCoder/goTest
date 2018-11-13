@@ -50,8 +50,17 @@
 - file 文件操作
     + os.OpenFile  写   os.Open 读
     + ioutil  统一读出写入
-- 模块 http
--
+
+- goroutine   M P G
+    + V1.8 下要设置CPU 核数
+    + 可以通过 全局变量数据传递
+    + 管道定义 var x chan type   用make 初始化   close(strChan) 关闭  range 遍历   var x chan<- int  只写  var x <-chan int 只读
+    + 管道的 select 操作 解决一直阻塞  select  case default
+    + recover() 捕获错误
+- 单元测试
+    + 文件命名 xxxx_test.go    函数名  Testxxxxx(t *testing.T) Test开头
+- Net Socket 服务
+- 
 
 
 
