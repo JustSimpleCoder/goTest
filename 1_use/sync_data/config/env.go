@@ -26,12 +26,6 @@ var redisEnv RedisConf = RedisConf{
     DbIndex:    0,
 }
 
-// var ApiConf = map[string]string{
-//     "url":   "http://tmdmapi.staff.xdf.cn",
-//     "token": "ef4e3a2b-ae21-4cad-ada8-86ec46a8a83g",
-//     "appid": "90101",
-// }
-
 var ApiConf = map[string]string{
     "url":   "",
     "token": "",
