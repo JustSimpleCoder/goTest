@@ -28,7 +28,7 @@
     + 结构体  new(Student)  &Student  都是初始化结构体的方法  返回指针  stu.  == ×stu  tag 信息   匿名字段
     ```
     type ST struct {
-        Name string `json:"stname"`
+        Name string `json:"stname"` `db:"name"`
         Age  int    `json:"stage"`
         Math
     }
