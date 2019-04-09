@@ -45,6 +45,7 @@
     v := reflect.ValueOf(x)
     v.Elem().SetInt(10)
     ```
+    + 异常处理   revocer 返回 err  if err!=nil  记录错误的Log
 
 - 线程同步  互斥锁、读写锁    import sync   原子操作 sync/atomic
 - file 文件操作

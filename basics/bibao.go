@@ -1,23 +1,23 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func Addr() func(int) int {
-    var x int
-    return func(d int) int {
-        x += d
-        return x
-    }
+	var x int
+	return func(d int) int {
+		x += d
+		return x
+	}
 }
 
 func main() {
 
-    f := Addr()
+	f := Addr()
 
-    fmt.Println(f(1))
-    fmt.Println(f(100))
-    fmt.Println(f(1000))
+	fmt.Println(f(1))
+	fmt.Println(f(100))
+	fmt.Println(f(1000))
 
 }

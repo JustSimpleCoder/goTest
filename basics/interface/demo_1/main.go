@@ -1,17 +1,17 @@
 package main
 
 import (
-    "fmt"
-    "reflect"
+	"fmt"
+	"reflect"
 )
 
 type Paper interface {
-    GetSize() string
+	GetSize() string
 }
 
 type Book interface {
-    GetName() string
-    Paper
+	GetName() string
+	Paper
 }
 
 type Math struct {
@@ -19,47 +19,47 @@ type Math struct {
 
 func (m *Math) GetName() string {
 
-    return "Math"
+	return "Math"
 }
 
 func (m *Math) GetSize() string {
 
-    return "A4"
+	return "A4"
 }
 
 func main() {
 
-    // _t1()
-    _t2()
+	// _t1()
+	_t2()
 
 }
 
 func _t2() {
 
-    // 基础的接口
-    var bookinterface Book
-    var mathbook Math
+	// 基础的接口
+	var bookinterface Book
+	var mathbook Math
 
-    bookinterface = &mathbook
+	bookinterface = &mathbook
 
-    name := bookinterface.GetName()
-    size := bookinterface.GetSize()
+	name := bookinterface.GetName()
+	size := bookinterface.GetSize()
 
-    v := reflect.TypeOf(bookinterface)
+	v := reflect.TypeOf(bookinterface)
 
-    fmt.Println(v)
-    fmt.Println(name, size)
+	fmt.Println(v)
+	fmt.Println(name, size)
 }
 
 func _t1() {
-    //空接口  谁都可以实现
-    var a interface{}
+	//空接口  谁都可以实现
+	var a interface{}
 
-    var b int
-    b = 1
+	var b int
+	b = 1
 
-    a = b
+	a = b
 
-    fmt.Printf("%T", a)
+	fmt.Printf("%T", a)
 
 }
